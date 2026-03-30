@@ -1,0 +1,83 @@
+/* ── Overlay ─────────────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  backdrop-filter: blur(2px);
+}
+
+/* ── Modal box ───────────────────────────────────────────────────── */
+.modal {
+  background: #1a1f2a;
+  border: 1px solid var(--border-hi);
+  border-radius: 10px;
+  padding: 28px 32px;
+  width: 360px;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.5);
+}
+
+.modal-title {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.modal-body {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────── */
+.btn-cancel {
+  background: none;
+  border: 1px solid var(--border-hi);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 8px 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-cancel:hover { background: rgba(255,255,255,0.05); }
+
+.btn-danger {
+  background: var(--danger);
+  border: none;
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.btn-danger:hover { opacity: 0.85; }
+
+.btn-primary {
+  background: var(--accent);
+  border: none;
+  color: #0d0f12;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.btn-primary:hover { opacity: 0.85; }

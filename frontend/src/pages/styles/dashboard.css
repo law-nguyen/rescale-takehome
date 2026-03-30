@@ -1,0 +1,169 @@
+/* ── App shell ──────────────────────────────────────────────────── */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.header {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0 32px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 64px;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.header-icon {
+  font-size: 20px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.header-title h1 {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+/* ── Create form ─────────────────────────────────────────────────── */
+.create-form {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+}
+
+.input-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.job-input {
+  background: var(--bg);
+  border: 1px solid var(--border-hi);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 8px 12px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s;
+}
+
+.job-input:focus       { border-color: var(--accent); }
+.job-input.input-error { border-color: var(--danger); }
+
+.form-error {
+  font-size: 11px;
+  color: var(--danger);
+  font-family: var(--font-mono);
+}
+
+.btn-submit {
+  background: var(--accent);
+  color: #0d0f12;
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+}
+.btn-submit:hover { opacity: 0.85; }
+
+/* ── Main ────────────────────────────────────────────────────────── */
+.main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Table header ────────────────────────────────────────────────── */
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 180px 40px;
+  padding: 8px 16px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Job list ────────────────────────────────────────────────────── */
+.job-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.state-msg {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 40px 16px;
+  text-align: center;
+}
+
+/* ── Pagination ──────────────────────────────────────────────────── */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px 0 8px;
+}
+
+.page-btn {
+  background: var(--surface);
+  border: 1px solid var(--border-hi);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 7px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.page-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.page-btn:disabled              { opacity: 0.3; cursor: not-allowed; }
+
+.page-info {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}

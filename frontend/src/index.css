@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+ 
+/* ── Variables ─────────────────────────────────────────────────── */
+:root {
+  --bg:        #0d0f12;
+  --surface:   #13161b;
+  --border:    #1f2430;
+  --border-hi: #2a3040;
+  --text:      #e2e8f0;
+  --muted:     #4a5568;
+  --accent:    #38bdf8;
+  --danger:    #ef4444;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-sans: 'IBM Plex Sans', sans-serif;
+  --radius:    6px;
+}
+ 
+/* ── Reset ──────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  min-height: 100vh;
+}
